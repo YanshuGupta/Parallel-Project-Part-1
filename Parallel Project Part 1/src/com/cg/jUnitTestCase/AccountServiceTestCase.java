@@ -18,6 +18,7 @@ import com.cg.exception.NegativeAmountException;
 import com.cg.repo.AccountRepo;
 import com.cg.service.AccountService;
 import com.cg.service.AccountServiceImpl;
+import com.cg.service.AccountRepoImpl;
 
 public class AccountServiceTestCase {
 
@@ -29,7 +30,7 @@ public class AccountServiceTestCase {
 		
 		MockitoAnnotations.initMocks(this);
 		
-		accountService = new AccountServiceImpl();
+		accountService = new AccountServiceImpl(new AccountRepoImpl());
 	}
 	//when(accountRepo.saveAccount(account)).thenReturn(true);
 
