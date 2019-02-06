@@ -15,9 +15,11 @@ import com.cg.repo.AccountRepoImpl;
 
 public class AccountServiceImpl implements AccountService {
 	
-	private static AccountRepo accountRepo = new AccountRepoImpl();;
+	private AccountRepo accountRepo;
 	
-	
+	public AccountServiceImpl(AccountRepo accountRepo){
+		this.accountRepo = accountRepo;
+	}
 	/* (non-Javadoc)
 	 * @see com.cg.service.AccountService#createAccount(long , double, java.lang.String, float, java.lang.String)
 	 */
